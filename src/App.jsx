@@ -5,10 +5,10 @@ import Profile from "./components/profile"
 function App() {
   return (
     <>
-      {/* <Login/>
-      <About/> */}
-      <Navbar/>
-      {/* <HomePage/> */}
+      {/* <Login/> */}
+      {/* <About/>  */}
+      {/* <Navbar/>
+      /* <HomePage/> */}
       <Profile/>
       
       

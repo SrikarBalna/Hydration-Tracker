@@ -19,89 +19,48 @@ const HydrationTracker = () => {
     return (
         <div className="root">
             <form className='form' onSubmit={handleAddIntake}>
-                <h1 className="logo" style={{ fontSize: '2.5rem', fontWeight: 'bold' ,}}>
-                    Hydration Tracker
+                <h1 className="logo" style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+                    Personal Information
                 </h1>
-                <div>
+                
+                <div className='input-group'>
                     <label>Name:</label>
-                    <br></br>
-                    <input 
-                    type="text"
-                    placeholder='Enter your name'
+                    <input type="text" placeholder='Enter your name' />
 
-                    ></input>
-                </div>
+                    <label>Date of Birth:</label>
+                    <input required type="date" placeholder='Enter your date of birth' />
 
-                <div>
                     <label>Age:</label>
-                    <br></br>
-                    <input
-                    min={0}
-                    type="number"
-                    placeholder='Enter your age'
-                    ></input>
-                </div>
+                    <input required min={1} max={120} step={1} type="number" placeholder='Enter your age' className='age' />
 
-                <div>
-                    <label>Gender: </label>
-                    <br></br>
+                    <label>Gender:</label>
                     <input type="radio" id="male" name="gender" value="male" />
                     <label htmlFor="male">Male</label>
-
                     <input type="radio" id="female" name="gender" value="female" />
                     <label htmlFor="female">Female</label>
-                </div> 
 
-                <div className='height-cointainer'>
-                    <label>Height:</label>
-                    <br></br>
-                    <input
-                    min={0}
-                    max={300}
-                    step={0.1}
-                    type="number"
-                    placeholder='Enter your height'
-                    width={"2rem"}
-                    ></input>
-                </div>
+                    <label htmlFor="height">Height:</label>
+                    <input id="height" required min={0} max={300} step={0.1} type="number" placeholder="Enter your height(in cetimeters)" className="input-field" />
 
-                <div className='weight-cointer'>
                     <label>Weight:</label>
-                    <br></br>
-                    <input
-                    min={0}
-                    max={200}
-                    step={0.1}
-                    type="number"
-                    placeholder='Enter your weight'
-                    ></input>
+                    <input required min={0} max={200} step={0.1} type="number" placeholder='Enter your weight' />
                 </div>
 
-                <div className='goal'>
+                <div className='goal-container'>
                     <label htmlFor="goal">Daily Water Intake Goal (in liters):</label>
-                    <br></br>
                     <input 
                         min={0}
+                        required
                         type="number"
                         id="goal" 
                         placeholder="Set your daily goal" 
                         value={goal} 
                         onChange={(e) => setGoal(e.target.value)} 
-                        required 
                     />
                 </div>
-                <button type="submit" className="bg-blue-500 text-white rounded-lg p-2">Add Intake</button>
+
+                <button type="submit" className="submit-button">Submit</button>
             </form>
-            <div className='mt-6'>
-                <h2 className="font-bold text-black text-xl">Total Water Intake: {totalIntake} L</h2>
-                <h2 className="font-bold text-black text-xl">Goal: {goal} L</h2>
-                <h3 className="font-bold text-black text-lg">Intake History:</h3>
-                <ul className="list-disc pl-5">
-                    {intakeHistory.map((intake, index) => (
-                        <li key={index}>{intake} L</li>
-                    ))}
-                </ul>
-            </div>
         </div>
     );
 };
