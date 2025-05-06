@@ -12,16 +12,19 @@
     transition: background-color 0.3s;
   }
   
-  .navbar-logo h1 {
+  .navbar .logo {
     margin: 0;
     /* font-family: "Tagesschrift", system-ui;
     font-weight: 400;
     font-style: normal; */
+    color: beige;
+    text-decoration: none;
   }
 
-  .navbar-logo h1:hover {
-    /* color: rgb(137, 7, 7); */
+  .navbar .logo:hover {
+    color: rgb(137, 7, 7);
     transition: color 0.3s;
+    text-decoration: none;
   }
   
   .navbar-links {

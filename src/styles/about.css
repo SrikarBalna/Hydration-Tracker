@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: beige;
-  color: #012e51; */
+
 }
 
 .out {
@@ -16,4 +15,12 @@
 .h2{
     font-size: 2rem;
     margin-bottom: 20px;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 400px;
+    font-size: 1.2rem;
 }

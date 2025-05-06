@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/profile.css'; // Import your CSS file
+import { useNavigate } from 'react-router-dom';
 
 const HydrationTracker = () => {
+
+    const navigate = useNavigate();
+
     const [waterIntake, setWaterIntake] = useState('');
     const [goal, setGoal] = useState('');
     const [intakeHistory, setIntakeHistory] = useState([]);
@@ -31,19 +35,21 @@ const HydrationTracker = () => {
                     <input required type="date" placeholder='Enter your date of birth' />
 
                     <label>Age:</label>
-                    <input required min={1} max={120} step={1} type="number" placeholder='Enter your age' className='age' />
+                    <input id="age" required min={1} max={120} step={1} type="number" placeholder='Enter your age' className='age' />
 
                     <label>Gender:</label>
-                    <input type="radio" id="male" name="gender" value="male" />
-                    <label htmlFor="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female" />
-                    <label htmlFor="female">Female</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male" />
+                        <label htmlFor="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" />
+                        <label htmlFor="female">Female</label>
+                    </div>
 
                     <label htmlFor="height">Height:</label>
-                    <input id="height" required min={0} max={300} step={0.1} type="number" placeholder="Enter your height(in cetimeters)" className="input-field" />
+                    <input id="w" required min={0} max={300} step={0.1} type="number" placeholder="Enter your height (in centimeters)" className="input-field" />
 
                     <label>Weight:</label>
-                    <input required min={0} max={200} step={0.1} type="number" placeholder='Enter your weight' />
+                    <input id = "w" required min={0} max={200} step={0.1} type="number" placeholder='Enter your weight (in kilograms)' />
                 </div>
 
                 <div className='goal-container'>
@@ -52,14 +58,22 @@ const HydrationTracker = () => {
                         min={0}
                         required
                         type="number"
-                        id="goal" 
+                        id="w" 
                         placeholder="Set your daily goal" 
                         value={goal} 
                         onChange={(e) => setGoal(e.target.value)} 
                     />
                 </div>
-
-                <button type="submit" className="submit-button">Submit</button>
+                <div className = "submit-container">
+                    <button type="submit" className="submit-button" onClick={(e) => {
+                        e.preventDefault();
+                        if (goal) {
+                            setIntakeHistory([...intakeHistory, goal]);
+                            setGoal('');
+                        }
+                        navigate('/home');
+                    }}>Submit</button>
+                </div>
             </form>
         </div>
     );

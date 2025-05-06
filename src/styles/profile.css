@@ -7,11 +7,11 @@ input, button {
 .root {
     max-width: 600px;
     width: 100vw;
-    background: hsl(60, 42%, 94%);
+    background: #f0f8ff;
     margin: 2rem auto;
     padding: 2.5rem 2rem;
     border-radius: 1.25rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 10px rgba(25, 25, 25, 0.12);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@ input, button {
 .logo {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #0a2a66;
+    color: #004d40;
     margin-bottom: 1.75rem;
     text-align: center;
     user-select: none;
@@ -29,7 +29,7 @@ input, button {
 }
 
 .logo:hover {
-    color: #891919;
+    color: #00796b;
 }
 
 .input-group {
@@ -37,13 +37,12 @@ input, button {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: #0a2a66;
+    color: #004d40;
 }
 
 .input-group label:hover {
-    color: #891919;
-    text-decoration: underline;
-    transition: color 0.1s ease;
+    color: #00796b;
+    transition: color 0.05s ease;
 }
 
 .input-group label,
@@ -53,6 +52,7 @@ input, button {
     margin-bottom: 0.3rem;
     display: inline-block;
     user-select: none;
+    border-radius: 10px;
 }
 
 .input-group input[type="text"],
@@ -67,12 +67,13 @@ input, button {
     box-sizing: border-box;
     font-weight: 400;
     color: #222;
+    border-radius: 10px;
 }
 
 .input-group input:focus,
 .goal-container input:focus {
-    border-color: #284b8f;
-    box-shadow: 0 0 6px #284b8f90;
+    border-color: #00796b;
+    box-shadow: 0 0 6px #00796b80;
 }
 
 .input-group div.gender-container {
@@ -80,7 +81,7 @@ input, button {
     align-items: center;
     gap: 1rem;
     margin-top: 0.3rem;
-    color: #0a2a66;
+    color: #004d40;
 }
 
 .input-group input[type="radio"] {
@@ -91,7 +92,6 @@ input, button {
 
 .input-group label[for="male"],
 .input-group label[for="female"] {
-    cursor: pointer;
     font-weight: 500;
     user-select: none;
 }
@@ -101,12 +101,12 @@ input, button {
     width: 100%;
     display: flex;
     flex-direction: column;
-    color: #0a2a66;
+    color: #004d40;
 }
 
 .submit-button {
     margin-top: 2rem;
-    background-color: #04688a;
+    background-color: #00796b;
     color: white;
     font-weight: 700;
     font-size: 1.25rem;
@@ -114,25 +114,96 @@ input, button {
     border-radius: 0.7rem;
     border: none;
     cursor: pointer;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.25s ease;
+    transition: background-color 0.05s ease, box-shadow 0.25s ease;
     user-select: none;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .submit-button:hover,
 .submit-button:focus {
-    background-color: #102f8c;
-    box-shadow: 0 0 10px #0d2370c9;
+    background-color: #00695c;
+    box-shadow: 0 0 10px #004d4060;
     outline: none;
 }
 
 .goal-container:hover label {
-    color: #891919;
-    text-decoration: underline;
-    transition: all 0.3s ease;
+    color: #00796b;
+    transition: color 0.05s ease;
 }
 
 .age {
     max-width: 100px;
+}
+.input-group input[type='text'],
+.input-group input[type='number'],
+.input-group input[type='date'],
+.goal-container input[type='number'] {
+    border: none;
+    border-bottom: 3px solid #004d40;
+    background-color: #e0f2f1;
+    padding: 0.65rem 1rem;
+    border-radius: 0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-weight: 400;
+    color: #004d40;
+}
+
+#age{
+    max-width: 10rem;
+}
+@media (max-width: 768px) {
+    .root {
+        padding: 2rem 1.2rem;
+        margin: 1.5rem auto;
+        width: 90vw;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .input-group {
+        gap: 0.75rem;
+    }
+
+    .input-group label,
+    .goal-container label {
+        font-size: 0.95rem;
+    }
+
+    .input-group input[type='text'],
+    .input-group input[type='number'],
+    .input-group input[type='date'],
+    .goal-container input[type='number'] {
+        font-size: 0.95rem;
+        padding: 0.55rem 0.8rem;
+    }
+
+    .submit-button {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .input-group input,
+    .goal-container input {
+        width: 100%;
+    }
 }
