@@ -1,5 +1,8 @@
 import React from "react";
 import '../styles/contact.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import LinkedIn and GitHub icons
+
 function Contact() {
     return (
         <div className="contact-container">
@@ -13,14 +16,23 @@ function Contact() {
                 <input type="email" id="email" name="email" required />
                 
                 <label htmlFor="message">Message:</label>
-                <input id="message" name="message" required></input>
+                <textarea id="message" name="message" required></textarea>
                 
                 <label htmlFor="num">Ph No:</label>
-                <input type="number" id="num" name="num" pattern="[0-9]{10}" min={0} max={10} required />
-                <br></br>
+                <input type="tel" id="num" name="num" pattern="[0-9]{10}" required />
+                <br />
                 <button type="submit">Send</button>
             </form>
+            <div className="social-media">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{marginLeft: "15px"}}>
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
+            </div>
         </div>
     );
 }
+
 export default Contact;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./../styles/home.css";  // updated to import new CSS
+import "./../styles/home.css";
 
 function HomePage() {
   const [waterLevel, setWaterLevel] = useState(0);
@@ -13,7 +13,7 @@ function HomePage() {
   };
 
   const glassesCount = Math.floor(waterLevel / 10);
-  const waterNeeded = 10 - glassesCount; 
+  const waterNeeded = 10 - glassesCount;
 
   return (
     <>

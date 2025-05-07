@@ -127,10 +127,8 @@ input, button {
     width: 100%;
 }
 
-.submit-button:hover,
-.submit-button:focus {
+.submit-button:hover {
     background-color: #00695c;
-    box-shadow: 0 0 10px #004d4060;
     outline: none;
 }
 

@@ -1,0 +1,108 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-page {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #005f56;
+}
+
+.login-title:hover {
+    color: #03a996;
+}
+
+.label:hover {
+    color: #00796b;
+    transition: color 0.05s ease;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Hover effect for email input */
+.login-form input[type="email"]:hover {
+    border-color: #00796b; /* Change border color on hover */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #005f56;
+}
+
+.mailin{
+    color: #00796b;
+    font-size: 1.2rem;
+}
+.mailin:hover {
+    color: #03a996;
+}
+
+.pass{
+    color: #00796b;
+    font-size: 1.2rem;
+}
+
+.pass:hover {
+    color: #03a996;
+}
+
+@media (max-width: 400px) {
+    .login-form {
+        padding: 15px;
+    }
+}

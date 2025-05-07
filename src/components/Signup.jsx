@@ -1,11 +1,11 @@
 import React from 'react';
-import "../styles/LoginPage.css"
+import "../styles/Signup.css"
 
 const LoginPage = () => {
   return (
     <div className="login-page">
       <form className="login-form" onSubmit={(e) => e.preventDefault()}>
-        <h2 className="login-title">Login</h2>
+        <h2 className="login-title">Signup</h2>
         <div className="input-group">
           <label className='mailin' htmlFor="email">Email</label>
           <input
@@ -26,10 +26,10 @@ const LoginPage = () => {
             autoComplete="current-password"
           />
         </div>
-        <button type="submit" className="login-button">Log In</button>
+        <button type="submit" className="login-button">Signup</button>
       </form>
     </div>
   );
 };
 
-export default LoginPage;
+export default Signup;
