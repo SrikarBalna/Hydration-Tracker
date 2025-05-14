@@ -104,33 +104,6 @@ input, button {
     color: #004d40;
 }
 
-.submit-button {
-    margin-top: 2rem;
-    background-color: #00796b;
-    color: white;
-    font-weight: 700;
-    font-size: 1.25rem;
-    padding: 0.85rem 1.75rem;
-    border-radius: 0.7rem;
-    border: none;
-    cursor: pointer;
-    /* width: 100%; */
-    text-align: center;
-    transition: background-color 0.05s ease, box-shadow 0.25s ease;
-    user-select: none;
-}
-
-.submit-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.submit-button:hover {
-    background-color: #00695c;
-    outline: none;
-}
 
 .goal-container:hover label {
     color: #00796b;
@@ -157,6 +130,14 @@ input, button {
 #age{
     max-width: 10rem;
 }
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
     .root {
         padding: 2rem 1.2rem;

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
-import Profile from "./components/Profile";
+import Profile from "./components/profile";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
@@ -21,5 +21,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

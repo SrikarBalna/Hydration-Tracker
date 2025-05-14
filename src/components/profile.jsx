@@ -12,9 +12,10 @@ const HydrationTracker = () => {
 
     const handleAddIntake = (e) => {
         e.preventDefault();
-        if (waterIntake) {
-            setIntakeHistory([...intakeHistory, waterIntake]);
-            setWaterIntake('');
+        if (goal) {
+            setIntakeHistory([...intakeHistory, goal]);
+            setGoal('');
+            navigate('/home');
         }
     };
 
@@ -65,14 +66,7 @@ const HydrationTracker = () => {
                     />
                 </div>
                 <div className = "submit-container">
-                    <button type="submit" className="submit-button" onClick={(e) => {
-                        e.preventDefault();
-                        if (goal) {
-                            setIntakeHistory([...intakeHistory, goal]);
-                            setGoal('');
-                        }
-                        navigate('/home');
-                    }}>Submit</button>
+                    <button type="submit" className="submit-button">Submit</button>
                 </div>
             </form>
         </div>
