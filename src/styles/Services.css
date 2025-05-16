@@ -27,6 +27,15 @@
     color: #555;
     text-align: center;
     line-height: 1.5;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 .data {
@@ -34,4 +43,11 @@
     font-size: 1rem;
     color: #666;
     margin-top: 10px;
+}
+.title :hover{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00796b;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
 }
