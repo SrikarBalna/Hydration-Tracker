@@ -14,9 +14,7 @@ input, button {
     box-shadow: 0 10px 10px rgba(25, 25, 25, 0.12);
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-
 .logo {
     font-size: 2.5rem;
     font-weight: 700;
@@ -130,13 +128,30 @@ input, button {
 #age{
     max-width: 10rem;
 }
-
-.submit-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+.submit-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.submit-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  background-color: #000000;
+  transform: translateY(0);
+}
+
 
 @media (max-width: 768px) {
     .root {
@@ -166,10 +181,6 @@ input, button {
         padding: 0.55rem 0.8rem;
     }
 
-    .submit-button {
-        font-size: 1.1rem;
-        padding: 0.7rem 1.5rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -177,9 +188,6 @@ input, button {
         font-size: 1.75rem;
     }
 
-    .submit-button {
-        width: 100%;
-    }
 
     .input-group input,
     .goal-container input {

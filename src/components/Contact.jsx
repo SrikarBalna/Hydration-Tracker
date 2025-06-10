@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/contact.css'; 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import LinkedIn and GitHub icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import LinkedIn and GitHub icons
 
 function Contact() {
     return (

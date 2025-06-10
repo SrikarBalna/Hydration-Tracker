@@ -47,10 +47,10 @@ const HydrationTracker = () => {
                     </div>
 
                     <label htmlFor="height">Height:</label>
-                    <input id="w" required min={0} max={300} step={0.1} type="number" placeholder="Enter your height (in centimeters)" className="input-field" />
+                    <input id="height" required min={0} max={300} step={0.1} type="number" placeholder="Enter your height (in centimeters)" className="input-field" />
 
                     <label>Weight:</label>
-                    <input id = "w" required min={0} max={200} step={0.1} type="number" placeholder='Enter your weight (in kilograms)' />
+                    <input id="weight" required min={0} max={200} step={0.1} type="number" placeholder='Enter your weight (in kilograms)' />
                 </div>
 
                 <div className='goal-container'>
@@ -59,15 +59,22 @@ const HydrationTracker = () => {
                         min={0}
                         required
                         type="number"
-                        id="w" 
+                        id="goal" 
                         placeholder="Set your daily goal" 
                         value={goal} 
                         onChange={(e) => setGoal(e.target.value)} 
                     />
                 </div>
-                <div className = "submit-container">
-                    <button type="submit" className="submit-button">Submit</button>
-                </div>
+                <button
+                    type="button"
+                    className="submit-button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/homepage');
+                    }}
+                >
+                    Get Started
+                </button>
             </form>
         </div>
     );

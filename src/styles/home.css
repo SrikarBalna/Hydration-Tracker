@@ -24,7 +24,7 @@
   transition: height 0.2s ease-in-out;
 }
 
-button {
+/* button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -32,13 +32,13 @@ button {
   border: none;
   border-radius: 5px;
   background-color: #1cc6ff;
-  color: white;
+  color: white; 
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #1d718d;
-}
+  background-color: #1d718d; 
+ } */
 
 .reset {
   background-color: red;

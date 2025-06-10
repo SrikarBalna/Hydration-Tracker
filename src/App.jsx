@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+// import Login from "./components/Login";
+// import Signup from "./components/Signup";
 import Navbar from "./components/Navbar";
-import LandingPage from "./components/LandingPage"; // Import the LandingPage component
+import LandingPage from "./components/Landing";
 import HomePage from "./components/HomePage";
-import Profile from "./components/profile";
-import About from "./components/About";
+import Profile from "./components/Profile";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./components/About";
+
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import "./styles/App.css";
 
 function App() {
+  const [isProfileFilled, setIsProfileFilled] = useState(false);
+
+  const handleProfileSubmit = () => {
+    setIsProfileFilled(true);
+  };
+
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<LandingPage />} /> {/* Landing page at root path */}
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<Signup />} /> */}
+        <Route path="/profile" element={<Profile onSubmit={handleProfileSubmit} />} />
+        <Route path="/homepage" element={<><Navbar /><HomePage /></> } />
+        <Route path="/about" element={<><Navbar /><About /></>} />
+        <Route path="/services" element={<><Navbar /><Services /></>} />
+        <Route path="/contact" element={<><Navbar /><Contact /></>} />
+        {/* <Route path="/homepage" element={isProfileFilled ? <><Navbar /><HomePage /></> } /> */}
       </Routes>
     </Router>
   );

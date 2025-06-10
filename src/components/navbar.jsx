@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <>
         <nav className="navbar">
-            <Link to="/profile" className="logo">Hydro Tracker</Link>
+            <Link to="/" className="logo">Hydro Tracker</Link>
             <div className="navbar-links">
                 <Link to = "/home">Home</Link>
                 <Link to = "/about">About</Link>
