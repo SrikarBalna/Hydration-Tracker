@@ -1,6 +1,7 @@
 .container {
   text-align: center;
   margin-top: 20px;
+  height: screen;
 }
 
 .glass {
@@ -24,7 +25,7 @@
   transition: height 0.2s ease-in-out;
 }
 
-/* button {
+button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -38,7 +39,7 @@
 
 button:hover {
   background-color: #1d718d; 
- } */
+ }
 
 .reset {
   background-color: red;

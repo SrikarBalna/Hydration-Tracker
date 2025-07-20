@@ -1,0 +1,37 @@
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.form-control:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+.select-control {
+  background-color: white;
+}
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+/* Exercise Search Styles */
+.exercise-search {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.exercise-results {
+  position: absolute;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #e2e8f0;
+}

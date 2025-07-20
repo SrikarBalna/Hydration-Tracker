@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./../styles/home.css";
+// import WorkoutPlanner from "./WorkoutPlanner"; // Import the WorkoutPlanner component
+import Footer from "./Footer";
 
 function HomePage() {
   const [waterLevel, setWaterLevel] = useState(0);
@@ -35,6 +37,9 @@ function HomePage() {
         </button>
         <p>Water Still Needed: {waterNeeded > 0 ? waterNeeded : 0} glasses</p>
       </div>
+
+      {/* <WorkoutPlanner /> */}
+      <Footer />
     </>
   );
 }

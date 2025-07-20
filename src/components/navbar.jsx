@@ -8,7 +8,7 @@ function Navbar() {
         <nav className="navbar">
             <Link to="/" className="logo">Hydro Tracker</Link>
             <div className="navbar-links">
-                <Link to = "/home">Home</Link>
+                <Link to = "/homepage">Home</Link>
                 <Link to = "/about">About</Link>
                 <Link to = "/services">Services</Link>
                 <Link to = "/contact">Contact</Link>
