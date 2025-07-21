@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/contact.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import LinkedIn and GitHub icons
+import { faLinkedin, faGithub, faXTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
     return (
@@ -25,10 +25,16 @@ function Contact() {
             </form>
             <div className="social-media">
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    <FontAwesomeIcon icon={faLinkedin} size="36px" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{marginLeft: "15px"}}>
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                {/* <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{marginLeft: "15px"}}>
+                    <FontAwesomeIcon icon={faGithub} size="36px" />
+                </a> */}
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <FontAwesomeIcon icon={faXTwitter} size="36px" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <FontAwesomeIcon icon={faInstagram} size="36px"/>
                 </a>
             </div>
         </div>
