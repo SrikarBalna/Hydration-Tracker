@@ -1,8 +1,14 @@
 .footer {
-  background-color: #18181b;
-  color: #d1d5db;
-  padding: 1.5rem 0;
-  text-align: center;
+    background-color: #18181b;
+    color: #d1d5db;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .footer-container {

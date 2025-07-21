@@ -25,8 +25,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/signup" element={<Signup />} /> */}
+        {/* <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} /> */}
         <Route path="/profile" element={<Profile onSubmit={handleProfileSubmit} />} />
         <Route path="/homepage" element={<><HomePage /></> } />
         <Route path="/about" element={<><About /></>} />

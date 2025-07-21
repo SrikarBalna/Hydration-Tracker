@@ -16,6 +16,7 @@
   align-items: center;
   flex-direction: column;
   background: linear-gradient(to bottom right, #d0f0fd, #ffffff);
+  margin-top: 5rem;
 }
 
 .button-container {

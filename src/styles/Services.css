@@ -1,11 +1,10 @@
 .services-container {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   background: linear-gradient(to bottom right, #d0f0fd, #ffffff);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
   box-sizing: border-box;
 }
 

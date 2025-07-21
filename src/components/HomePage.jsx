@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useState  , useEffect} from "react";
 import "./../styles/home.css";
 import WorkoutDashboard from "./WorkoutDashboard";
 import Footer from "./Footer";
 import Navbar from "../components/Navbar";
+import Hamburg from "./Hamburg";
 function HomePage() {
+  const [ismobile, setisMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setisMobile(true);
+      } else {
+        setisMobile(false);
+      }
+    }
+    document.addEventListener("resize", handleResize);
+    return () => document.removeEventListener("resize", handleResize);
+  } , [])
   const [waterLevel, setWaterLevel] = useState(0);
 
   const addWater = () => {
@@ -19,9 +32,9 @@ function HomePage() {
 
   return (
     <>
-      <Navbar />
+      {ismobile ? <Hamburg /> : <Navbar />}
       <div className="outer-container">
-        <div className="container">
+                <div className="container">
           <h1>Welcome to Hydro Tracker</h1>
           <p>Your ultimate solution for tracking water consumption and staying hydrated.</p>
         </div>
@@ -45,10 +58,10 @@ function HomePage() {
           </div>
           <p>Water Still Needed: {waterNeeded > 0 ? waterNeeded : 0} glasses</p>
         </div>
+      </div>
         <div className="footer-container">
           <Footer />
         </div>
-      </div>
     </>
   );
 }

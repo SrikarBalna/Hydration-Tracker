@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/services.css'; 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Services() {
     return (
@@ -25,6 +26,7 @@ function Services() {
                 </div>
             </div>
         </div>
+        <Footer />
     </>
     );
 }

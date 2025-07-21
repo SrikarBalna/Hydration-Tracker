@@ -1,6 +1,13 @@
 .help-wrapper {
   background-color: #f0fbff;
   height: 100vh;
+  padding-top: 3rem;
+}
+.logo:hover {
+  text-align: center;
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .help-container {
