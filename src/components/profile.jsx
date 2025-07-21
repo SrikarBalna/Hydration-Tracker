@@ -47,7 +47,7 @@ const HydrationTracker = () => {
                     </div>
 
                     <label htmlFor="height">Height:</label>
-                    <input id="height" required min={0} max={300} step={0.1} type="number" placeholder="Enter your height (in centimeters)" className="input-field" />
+                    <input id="height" required min={0} max={200} step={0.1} type="number" placeholder="Enter your height (in centimeters)" className="input-field" />
 
                     <label>Weight:</label>
                     <input id="weight" required min={0} max={200} step={0.1} type="number" placeholder='Enter your weight (in kilograms)' />

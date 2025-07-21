@@ -6,7 +6,7 @@
   padding: 2rem;
   box-shadow: 1px 0 40px rgba(7, 7, 7, 0.1);
   border-radius: 1rem;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .outer-container {
@@ -16,7 +16,6 @@
   align-items: center;
   flex-direction: column;
   background: linear-gradient(to bottom right, #d0f0fd, #ffffff);
-  margin-top: 5rem;
 }
 
 .button-container {
@@ -32,7 +31,7 @@
   border: 5px solid black;
   border-radius: 1.5rem;
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
   overflow: hidden;
   margin: 0 auto;
 }
@@ -48,7 +47,6 @@
 }
 
 button {
-  margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
