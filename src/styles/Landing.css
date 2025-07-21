@@ -1,53 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  overflow-x: hidden;
+}
+
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f8ff;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .landing-page h1 {
-    font-size: 3.5rem;
-    color: #063e51;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .landing-page p {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 20px 0;
-    line-height: 1.5;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+  color: #e0f7ff;
 }
 
 .start-button {
-    background-color: #063e51;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #ffffff;
+  color: #2f80ed;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .start-button:hover {
-    background-color: #1cb5e8;
-    transform: translateY(-2px);
-}
-
-.start-button:active {
-    transform: translateY(0);
-}
-.start-button:focus {
-    outline: none;
-}
-.start-button:focus-visible {
-    outline: 2px solid #1cb5e8;
-    outline-offset: 2px;
+  background-color: #e0f7ff;
+  transform: scale(1.05);
 }

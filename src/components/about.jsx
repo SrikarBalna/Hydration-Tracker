@@ -1,8 +1,11 @@
 import React from 'react';
 import '../styles/About.css';
+import Navbar from '../components/Navbar';
 
 const AboutPage = () => {
   return (
+    <>
+    <Navbar />
     <div className="about-container">
       <div className="content-wrapper">
         <section className="section">
@@ -42,6 +45,7 @@ const AboutPage = () => {
         </section>
       </div>
     </div>
+</>
   );
 };
 

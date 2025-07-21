@@ -1,0 +1,76 @@
+.help-wrapper {
+  background-color: #f0fbff;
+  height: 100vh;
+}
+
+.help-container {
+  margin-top: 100px;
+  padding: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.help-title {
+  text-align: center;
+  color: #0077b6;
+}
+.help-title:hover {
+  color: #005f87;
+}
+
+.faq-list {
+  margin-top: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #caf0f8;
+  color: #03045e;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.faq-answer {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #e0f7ff;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #023e8a;
+}
+
+.contact-box {
+  margin-top: 2rem;
+  background-color: #edf6f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact-box:hover {
+  background-color: #dbe9f4;
+  transition: background-color 0.3s ease;
+}
+
+.contact-box h2 {
+  color: #0077b6;
+}
+.contact-box p {
+  color: #333;
+  font-size: 16px;
+}

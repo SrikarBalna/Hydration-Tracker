@@ -2,9 +2,12 @@ import React from "react";
 import '../styles/contact.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faXTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import Navbar from "../components/Navbar";
 
 function Contact() {
     return (
+        <>
+        <Navbar />
         <div className="contact-container">
             <h1 className="title">Contact Us</h1>
             <p className="text">If you have any questions or feedback, feel free to reach out!</p>
@@ -38,6 +41,7 @@ function Contact() {
                 </a>
             </div>
         </div>
+    </>
     );
 }
 

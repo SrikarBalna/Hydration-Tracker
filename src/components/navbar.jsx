@@ -12,7 +12,9 @@ function Navbar() {
                 <Link to = "/about">About</Link>
                 <Link to = "/blog">Blog</Link>
                 <Link to = "/services">Services</Link>
+                <Link to = "/help">Help</Link>
                 <Link to = "/contact">Contact</Link>
+
             </div>
         </nav>
         </>

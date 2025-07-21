@@ -1,195 +1,102 @@
-input, button {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1rem;
-    outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
 }
 
 .root {
-    max-width: 600px;
-    width: 100vw;
-    background: #f0f8ff;
-    margin: 2rem auto;
-    padding: 2.5rem 2rem;
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 10px rgba(25, 25, 25, 0.12);
-    display: flex;
-    flex-direction: column;
-}
-.logo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #004d40;
-    text-align: center;
-    user-select: none;
-    cursor: default;
-    transition: color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.logo:hover {
-    color: #00796b;
+.form {
+  background-color: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+  color: #2f80ed;
+  margin-bottom: 1.5rem;
 }
 
 .input-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: #004d40;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.input-group label:hover {
-    color: #00796b;
-    transition: color 0.05s ease;
-}
-
-.input-group label,
-.goal-container label {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-    display: inline-block;
-    user-select: none;
-    border-radius: 10px;
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .input-group input[type="text"],
-.input-group input[type="number"],
 .input-group input[type="date"],
-.goal-container input[type="number"] {
-    padding: 0.65rem 1rem;
-    border-radius: 0.5rem;
-    border: 1.8px solid #bbb;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    font-weight: 400;
-    color: #222;
-    border-radius: 10px;
+.input-group input[type="number"] {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-.input-group input:focus,
-.goal-container input:focus {
-    border-color: #00796b;
-    box-shadow: 0 0 6px #00796b80;
-}
-
-.input-group div.gender-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.3rem;
-    color: #004d40;
+.input-group div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.25rem;
 }
 
 .input-group input[type="radio"] {
-    cursor: pointer;
-    width: 1.15rem;
-    height: 1.15rem;
-}
-
-.input-group label[for="male"],
-.input-group label[for="female"] {
-    font-weight: 500;
-    user-select: none;
+  margin-right: 0.4rem;
 }
 
 .goal-container {
-    margin-top: 1.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #004d40;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.goal-container:hover label {
-    color: #00796b;
-    transition: color 0.05s ease;
+.goal-container label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 
-.age {
-    max-width: 100px;
-}
-.input-group input[type='text'],
-.input-group input[type='number'],
-.input-group input[type='date'],
-.goal-container input[type='number'] {
-    border: none;
-    border-bottom: 3px solid #004d40;
-    background-color: #e0f2f1;
-    padding: 0.65rem 1rem;
-    border-radius: 0;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-    font-weight: 400;
-    color: #004d40;
+.goal-container input {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-#age{
-    max-width: 10rem;
-}
 .submit-button {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 1rem 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2f80ed;
   border: none;
-  border-radius: 0.75rem;
-  font-size: 1.25rem;
-  font-weight: 700;
+  border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #333333;
-  transform: translateY(-2px);
-}
-
-.submit-button:active {
-  background-color: #000000;
-  transform: translateY(0);
-}
-
-
-@media (max-width: 768px) {
-    .root {
-        padding: 2rem 1.2rem;
-        margin: 1.5rem auto;
-        width: 90vw;
-    }
-
-    .logo {
-        font-size: 2rem;
-    }
-
-    .input-group {
-        gap: 0.75rem;
-    }
-
-    .input-group label,
-    .goal-container label {
-        font-size: 0.95rem;
-    }
-
-    .input-group input[type='text'],
-    .input-group input[type='number'],
-    .input-group input[type='date'],
-    .goal-container input[type='number'] {
-        font-size: 0.95rem;
-        padding: 0.55rem 0.8rem;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.75rem;
-    }
-
-
-    .input-group input,
-    .goal-container input {
-        width: 100%;
-    }
+  background-color: #1e5fd6;
 }

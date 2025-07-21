@@ -1,8 +1,11 @@
 import React from "react";
 import '../styles/services.css'; 
+import Navbar from "../components/Navbar";
 
 function Services() {
     return (
+        <>
+        <Navbar />
         <div className="services-container">
             <div className="services-wrapper">
                 <h1 className="services-title">Our Services</h1>
@@ -22,6 +25,7 @@ function Services() {
                 </div>
             </div>
         </div>
+    </>
     );
 }
 
