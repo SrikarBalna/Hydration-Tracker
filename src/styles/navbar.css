@@ -3,12 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(to right, #a8edea, #fed6e3);
   color: #033649;
-  border-radius: 1rem;
-  margin: 1rem auto;
-  max-width: 1200px;
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 6px 12px rgba(9, 9, 9, 0.2);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 

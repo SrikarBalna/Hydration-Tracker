@@ -10,6 +10,7 @@ function Navbar() {
             <div className="navbar-links">
                 <Link to = "/homepage">Home</Link>
                 <Link to = "/about">About</Link>
+                <Link to = "/blog">Blog</Link>
                 <Link to = "/services">Services</Link>
                 <Link to = "/contact">Contact</Link>
             </div>

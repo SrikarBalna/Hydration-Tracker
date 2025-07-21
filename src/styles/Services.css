@@ -1,53 +1,51 @@
 .services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #d0f0fd, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
 }
 
-.services-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 700;
-    color: #333;
-    text-align: center;
+.services-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
 }
 
-.services-container p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
-    color: #555;
-    text-align: center;
-    line-height: 1.5;
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-weight: 300;
-    line-height: 1.5;
+.services-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0077b6;
+  margin-bottom: 10px;
 }
 
-.data {
-    font-weight: 300;
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
+.services-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
 }
-.title :hover{
-    font-size: 5rem;
-    font-weight: 700;
-    color: #00796b;
-    transition: color 0.3s ease;
-    margin-bottom: 10px;
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.service-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }

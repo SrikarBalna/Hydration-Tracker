@@ -1,7 +1,23 @@
 .container {
   text-align: center;
   margin-top: 20px;
-  height: screen;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .glass {

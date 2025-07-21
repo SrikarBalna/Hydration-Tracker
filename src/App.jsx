@@ -8,6 +8,7 @@ import Profile from "./components/Profile";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Blog from "./components/Blog";
 
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import "./styles/App.css";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<><Navbar /><About /></>} />
         <Route path="/services" element={<><Navbar /><Services /></>} />
         <Route path="/contact" element={<><Navbar /><Contact /></>} />
+        <Route path="/blog" element={<><Navbar /><Blog /></>} />
         {/* <Route path="/homepage" element={isProfileFilled ? <><Navbar /><HomePage /></> } /> */}
       </Routes>
     </Router>

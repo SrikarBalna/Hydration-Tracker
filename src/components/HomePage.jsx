@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./../styles/home.css";
-// import WorkoutPlanner from "./WorkoutPlanner"; // Import the WorkoutPlanner component
+import WorkoutDashboard from "./WorkoutDashboard";
 import Footer from "./Footer";
 
 function HomePage() {
@@ -19,6 +19,7 @@ function HomePage() {
 
   return (
     <>
+    <div className="outer-container">
       <div className="container">
         <div className="glass" aria-label="glass of water" role="img">
           <div
@@ -29,17 +30,22 @@ function HomePage() {
         <div className="glasses-count" aria-live="polite">
           Glasses consumed: {glassesCount}
         </div>
-        <button onClick={addWater} aria-label="Add water to glass">
+       <div className="buttons-container">
+         <button onClick={addWater} aria-label="Add water to glass">
           Add Water
         </button>
         <button onClick={resetWater} aria-label="Reset water count" className="reset">
           Reset
         </button>
+       </div>
         <p>Water Still Needed: {waterNeeded > 0 ? waterNeeded : 0} glasses</p>
       </div>
+    </div>
 
-      {/* <WorkoutPlanner /> */}
-      <Footer />
+      <div className="footer-container">
+        <Footer />
+      </div>
+
     </>
   );
 }
