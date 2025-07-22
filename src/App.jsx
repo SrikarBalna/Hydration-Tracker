@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Navbar from "./components/Navbar";
 // import LandingPage from "./components/Landing";
 import HomePage from "./components/HomePage";
 import Profile from "./components/Profile";
