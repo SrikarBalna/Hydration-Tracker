@@ -1,58 +1,168 @@
-import { useState } from "react";
-import "../styles/Help.css";
-import Navbar from "../components/Navbar";
-function Help() {
-  const [openFAQ, setOpenFAQ] = useState(null);
+import React from 'react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Accordion from '../components/Accordian';
+import ContactForm from '../components/ContactForm';
+import { faqs } from '../mockData/mockData'
+import '../styles/Help.css';
+import Navbar from './Navbar';
 
-  const faqs = [
-    {
-      question: "How do I track my water intake?",
-      answer:
-        "Click the water add button on the homepage to log your daily water consumption.",
-    },
-    {
-      question: "How much water should I drink daily?",
-      answer:
-        "It varies based on weight and activity. Generally, aim for 2-3 liters per day unless advised otherwise.",
-    },
-    {
-      question: "Can I view past hydration records?",
-      answer:
-        "Yes, use the history tab to see your previous water intake logs.",
-    },
-  ];
-
-  const toggleFAQ = (index) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
-
+const Help = () => {
   return (
-    
-    <div className="help-wrapper">
+    <div className="min-h-screen">
       <Navbar />
-      <div className="help-container">
-        <h1 className="help-title">Help & FAQ</h1>
-        <div className="faq-list">
-          {faqs.map((faq, index) => (
-            <div key={index} className="faq-item">
-              <button onClick={() => toggleFAQ(index)} className="faq-question">
-                {faq.question}
-              </button>
-              {openFAQ === index && (
-                <div className="faq-answer">{faq.answer}</div>
-              )}
+      <section className="help-hero-section">
+        <div className="help-hero-container">
+          <h1 className="help-hero-title">
+            How Can We <span className="help-hero-highlight">Help?</span>
+          </h1>
+          <p className="help-hero-description">
+            Find answers to common questions or get in touch with our support team. 
+            We're here to help you make the most of your HydroSync experience.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="help-faq-section">
+        <div className="help-faq-container">
+          <div className="help-faq-header">
+            <h2 className="help-faq-title">
+              Frequently Asked Questions
+            </h2>
+            <p className="help-faq-description">
+              Quick answers to the most common questions about HydroSync
+            </p>
+          </div>
+
+          <div className="help-faq-content">
+            <Accordion items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="help-contact-section">
+        <div className="help-contact-container">
+          <div className="help-contact-header">
+            <h2 className="help-contact-title">
+              Get In Touch
+            </h2>
+            <p className="help-contact-description">
+              Still have questions? We'd love to hear from you.
+            </p>
+          </div>
+
+          <div className="help-contact-grid">
+            {/* Contact Form */}
+            <div className="help-contact-form">
+              <ContactForm title="Send us a Message" />
             </div>
-          ))}
+
+            {/* Contact Details */}
+            <div className="help-contact-details">
+              <div className="help-contact-info-card">
+                <h3 className="help-contact-info-title">Contact Information</h3>
+                
+                <div className="help-contact-info-list">
+                  <div className="help-contact-info-item">
+                    <Mail className="help-contact-info-icon" />
+                    <div className="help-contact-info-content">
+                      <h4 className="help-contact-info-label">Email</h4>
+                      <p className="help-contact-info-value">contact@hydrosync.com</p>
+                      <p className="help-contact-info-note">We typically respond within 24 hours</p>
+                    </div>
+                  </div>
+
+                  <div className="help-contact-info-item">
+                    <Phone className="help-contact-info-icon" />
+                    <div className="help-contact-info-content">
+                      <h4 className="help-contact-info-label">Phone</h4>
+                      <p className="help-contact-info-value">+1 (555) 123-4567</p>
+                      <p className="help-contact-info-note">Monday - Friday, 9am - 5pm EST</p>
+                    </div>
+                  </div>
+
+                  <div className="help-contact-info-item">
+                    <MapPin className="help-contact-info-icon" />
+                    <div className="help-contact-info-content">
+                      <h4 className="help-contact-info-label">Address</h4>
+                      <p className="help-contact-info-value">123 Health Street<br />Wellness City, WC 12345</p>
+                    </div>
+                  </div>
+
+                  <div className="help-contact-info-item">
+                    <Clock className="help-contact-info-icon" />
+                    <div className="help-contact-info-content">
+                      <h4 className="help-contact-info-label">Support Hours</h4>
+                      <p className="help-contact-info-value">Monday - Friday: 9:00 AM - 5:00 PM EST<br />
+                      Saturday - Sunday: 10:00 AM - 2:00 PM IST</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Map Placeholder */}
+              <div className="help-map-placeholder">
+                <div className="help-map-content">
+                  <div className="help-map-text">
+                    <MapPin className="help-map-icon" />
+                    <p className="help-map-title">Interactive Map</p>
+                    <p className="help-map-subtitle">Find us at our headquarters</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="contact-box">
-          <h2>Contact Us</h2>
-          <p>Email: support@hydrotracker.com</p>
-          <p>Phone: +91 9********0</p>
-          <p>Location: India</p>
+      </section>
+
+      {/* Support Features */}
+      <section className="help-support-section">
+        <div className="help-support-container">
+          <div className="help-support-header">
+            <h2 className="help-support-title">
+              More Ways to Get Help
+            </h2>
+          </div>
+
+          <div className="help-support-grid">
+            <div className="help-support-card">
+              <div className="help-support-icon-container">
+                <Mail className="help-support-icon" />
+              </div>
+              <h3 className="help-support-card-title">Email Support</h3>
+              <p className="help-support-card-description">Get detailed help via email with our support team.</p>
+              <a href="#" className="help-support-card-link">
+                Send Email →
+              </a>
+            </div>
+
+            <div className="help-support-card">
+              <div className="help-support-icon-container">
+                <Phone className="help-support-icon" />
+              </div>
+              <h3 className="help-support-card-title">Live Chat</h3>
+              <p className="help-support-card-description">Chat with our support team in real-time.</p>
+              <a href="#" className="help-support-card-link">
+                Start Chat →
+              </a>
+            </div>
+
+            <div className="help-support-card">
+              <div className="help-support-icon-container">
+                <Clock className="help-support-icon" />
+              </div>
+              <h3 className="help-support-card-title">Help Center</h3>
+              <p className="help-support-card-description">Browse our comprehensive help documentation.</p>
+              <a href="#" className="help-support-card-link">
+                Visit Help Center →
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
-}
+};
 
 export default Help;

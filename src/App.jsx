@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import Login from "./components/Login";
-// import Signup from "./components/Signup";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 import Navbar from "./components/Navbar";
-import LandingPage from "./components/Landing";
+// import LandingPage from "./components/Landing";
 import HomePage from "./components/HomePage";
 import Profile from "./components/Profile";
 import Services from "./components/Services";
@@ -24,11 +24,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} /> */}
+        {/* <Route path="/" element={<LandingPage />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile onSubmit={handleProfileSubmit} />} />
-        <Route path="/homepage" element={<><HomePage /></> } />
+        <Route path="/" element={<><HomePage /></> } />
         <Route path="/about" element={<><About /></>} />
         <Route path="/services" element={<><Services /></>} />
         <Route path="/help" element={<><Help /></>} />

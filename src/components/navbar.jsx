@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link , useLocation} from 'react-router-dom'
 import { Menu, X, Droplets, Search } from 'lucide-react';
 import '../styles/navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({ onSearch }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
+const navigate = useNavigate();
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [searchQuery, setSearchQuery] = useState('');
+const location = useLocation();
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ const Navbar = ({ onSearch }) => {
           {/* Logo */}
           <Link to="/" className="navbar-logo">
             <Droplets className="navbar-logo-icon" />
-            <span className="navbar-logo-text">HydroSync</span>
+            <span className="navbar-logo-text">Hydro Tracker</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,12 +51,12 @@ const Navbar = ({ onSearch }) => {
               ))}
             </div>
             <div className="navbar-buttons">
-              <button className="navbar-login-btn">
+              <Link to="/login" className="navbar-login-btn">
                 Login
-              </button>
-              <button className="navbar-signup-btn">
+              </Link>
+              <Link to='/signup' className="navbar-signup-btn">
                 Sign Up
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -85,12 +87,12 @@ const Navbar = ({ onSearch }) => {
                 </Link>
               ))}
               <div className="navbar-mobile-buttons">
-                <button className="navbar-mobile-login-btn">
+                <Link to="/login" className="navbar-mobile-login-btn" onClick={() => console.log('Login clicked')}>
                   Login
-                </button>
-                <button className="navbar-mobile-signup-btn">
+                </Link>
+                <Link to="/signup" className="navbar-mobile-signup-btn" onClick={() => console.log('Sign Up clicked')}>
                   Sign Up
-                </button>
+                </Link>
               </div>
             </div>
           </div>

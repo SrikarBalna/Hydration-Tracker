@@ -70,7 +70,7 @@ const HydrationTracker = () => {
                     className="submit-button"
                     onClick={(e) => {
                         e.preventDefault();
-                        navigate('/homepage');
+                        navigate('/');
                     }}
                 >
                     Get Started
