@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-// import LandingPage from "./components/Landing";
+
 import HomePage from "./components/HomePage";
 import Profile from "./components/Profile"
 import Services from "./components/Services";
