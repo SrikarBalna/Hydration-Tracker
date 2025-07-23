@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-
-import HomePage from "./components/HomePage";
 import Profile from "./components/Profile"
+import HomePage from "./components/HomePage";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -23,7 +22,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<LandingPage />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile onSubmit={handleProfileSubmit} />} />
@@ -33,7 +31,6 @@ function App() {
         <Route path="/help" element={<><Help /></>} />
         <Route path="/contact" element={<><Contact /></>} />
         <Route path="/blog" element={<><Blog /></>} />
-        {/* <Route path="/homepage" element={isProfileFilled ? <><Navbar /><HomePage /></> } /> */}
       </Routes>
     </Router>
   );

@@ -18,7 +18,7 @@ const ContactForm = ({ title = "Get In Touch", className = "" }) => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    alert('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };

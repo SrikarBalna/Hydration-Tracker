@@ -158,3 +158,10 @@
   font-size: 12px;
   color: #6b7280;
 }
+.progress-circle .circle {
+  width: 200px;   /* increased size */
+  height: 200px;  /* increased size */
+}
+.progress-percentage {
+  font-size: 3rem; /* bigger text */
+}

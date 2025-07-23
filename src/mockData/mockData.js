@@ -85,21 +85,21 @@ export const testimonials = [
     id: 1,
     name: "Alex Thompson",
     role: "Fitness Enthusiast",
-    content: "HydroSync transformed my hydration habits! The reminders are perfectly timed, and I love seeing my progress visualized.",
+    content: "HydroTracker transformed my hydration habits! The reminders are perfectly timed, and I love seeing my progress visualized.",
     image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200"
   },
   {
     id: 2,
     name: "Rachel Green",
     role: "Busy Mom",
-    content: "As a busy mom, I often forgot to drink water. HydroSync's gentle reminders and easy tracking keep me on track!",
+    content: "As a busy mom, I often forgot to drink water. HydroTracker gentle reminders and easy tracking keep me on track!",
     image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=200"
   },
   {
     id: 3,
     name: "David Martinez",
     role: "Office Worker",
-    content: "The app's interface is so clean and motivating. I've increased my daily water intake by 40% since using HydroSync!",
+    content: "The app's interface is so clean and motivating. I've increased my daily water intake by 40% since using HydroTracker!",
     image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=200"
   }
 ];
@@ -113,12 +113,12 @@ export const faqs = [
   {
     id: 2,
     question: "Can I track other beverages besides water?",
-    answer: "Yes! HydroSync allows you to track various beverages including tea, coffee, juice, and more. Each beverage has different hydration values that are automatically calculated."
+    answer: "Yes! HydroTracker allows you to track various beverages including tea, coffee, juice, and more. Each beverage has different hydration values that are automatically calculated."
   },
   {
     id: 3,
     question: "Does the app work offline?",
-    answer: "HydroSync works offline for basic tracking. Your data syncs automatically when you reconnect to the internet, ensuring you never lose your progress."
+    answer: "HydroTracker works offline for basic tracking. Your data syncs automatically when you reconnect to the internet, ensuring you never lose your progress."
   },
   {
     id: 4,

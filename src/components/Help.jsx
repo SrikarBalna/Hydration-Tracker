@@ -17,7 +17,7 @@ const Help = () => {
           </h1>
           <p className="help-hero-description">
             Find answers to common questions or get in touch with our support team. 
-            We're here to help you make the most of your HydroSync experience.
+            We're here to help you make the most of your Hydrotracker experience.
           </p>
         </div>
       </section>
@@ -30,7 +30,7 @@ const Help = () => {
               Frequently Asked Questions
             </h2>
             <p className="help-faq-description">
-              Quick answers to the most common questions about HydroSync
+              Quick answers to the most common questions about HydroTracker
             </p>
           </div>
 
@@ -68,16 +68,16 @@ const Help = () => {
                     <Mail className="help-contact-info-icon" />
                     <div className="help-contact-info-content">
                       <h4 className="help-contact-info-label">Email</h4>
-                      <p className="help-contact-info-value">contact@hydrosync.com</p>
+                      <p className="help-contact-info-value">#contact@hydrotracker.com</p>
                       <p className="help-contact-info-note">We typically respond within 24 hours</p>
                     </div>
                   </div>
 
                   <div className="help-contact-info-item">
                     <Phone className="help-contact-info-icon" />
-                    <div className="help-contact-info-content">
+                    <div className="help-contact-info-content"> 
                       <h4 className="help-contact-info-label">Phone</h4>
-                      <p className="help-contact-info-value">+1 (555) 123-4567</p>
+                      <p className="help-contact-info-value">+91 123-4567-890</p>
                       <p className="help-contact-info-note">Monday - Friday, 9am - 5pm EST</p>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ const Help = () => {
                     <Clock className="help-contact-info-icon" />
                     <div className="help-contact-info-content">
                       <h4 className="help-contact-info-label">Support Hours</h4>
-                      <p className="help-contact-info-value">Monday - Friday: 9:00 AM - 5:00 PM EST<br />
+                      <p className="help-contact-info-value">Monday - Friday: 9:00 AM - 5:00 PM IST<br />
                       Saturday - Sunday: 10:00 AM - 2:00 PM IST</p>
                     </div>
                   </div>
