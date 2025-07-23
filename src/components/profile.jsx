@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/profile.css'; // Import your CSS file
 import { useNavigate } from 'react-router-dom';
 
-const HydrationTracker = () => {
+const Profile = () => {
 
     const navigate = useNavigate();
 
@@ -80,4 +80,4 @@ const HydrationTracker = () => {
     );
 };
 
-export default HydrationTracker;
+export default Profile;
